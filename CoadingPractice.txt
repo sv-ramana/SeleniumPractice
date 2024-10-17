@@ -1,0 +1,251 @@
+public class Main {
+	public static void main(String[] args) {
+		String Value = "GooDNBye";
+		char [] ch = Value.toCharArray();
+		String val = "";
+		for (int i = 0;i < ch.length; i++) {
+		   String txt = Character.toString(Value.charAt(i));
+		   if (Character.isLowerCase(Value.charAt(i))) {
+		     val = val + txt.toUpperCase();
+		   } else {
+		     val = val + txt.toLowerCase();
+		   }
+		}
+		System.out.println(val);
+	}
+}
+
+-----------------------
+public class Main {
+	public static void main(String[] args) {
+    String Valu = "Iamsoftwaredeveloper";
+    String Name = "";
+    for (int i = 0; i < Valu.length(); i ++) {
+      String rstr = Character.toString(Valu.charAt(i));
+      Name = rstr + Name;
+    }
+    System.out.println(Name);
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+    String Valu = "Iamsoftwaredeveloper";
+    StringBuilder bem = new StringBuilder();
+    bem.append(Valu);
+    bem.reverse();
+    System.out.println(bem);
+	}
+}
+
+---------------------------------
+
+      String Value = "I am a software test engineer in java selenium";
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+       // ' Code to get the "A' times present in the Java
+        for (int i = 0; i < Value.length(); i++){
+            String name = Character.toString(Value.charAt(i));
+            if (map.containsValue(Value.charAt(i))){
+                map.put(Character.toString(Value.charAt(i)), 1);
+            } else {
+                map.put(String.valueOf(map.containsValue(name)), map.get(i+1));
+            }
+        }
+
+        for (String key : map.keySet()){
+            if (map.containsValue("a")){
+                System.out.println("Value of " + key + "numbers of :");
+            }
+        }
+
+    }
+
+------------------------------------
+
+        String name = "have a same word with name of Word diffrent word so make word  some fun with word and do words calculation on the work para";
+        String Splitname[] = name.split(" ");
+        int Count = 0;
+        for (String word : Splitname) {
+            if (word.equals("word")) {
+                Count++;
+            }
+        }
+        System.out.println("COunt of word name is " + Count);
+    }
+
+--------------------------------
+
+       String name = "removeremoveaaaaa".toLowerCase(); // Remove duplicates
+        char [] cha = name.toCharArray();
+        LinkedHashSet<Character> cch = new LinkedHashSet<Character>();
+        for (int i = 0; i < name.length();i++) {
+            if(!cch.contains(cha[i])) {
+                cch.add(cha[i]);
+            }
+        }
+        //System.out.println(cch);
+        String str = "";
+        for (char chn : cch) {
+            String Val = Character.toString(chn);
+            str = str + Val;
+        }
+        System.out.println(str);
+    }
+
+
+----------------------------------------
+
+
+       //Febnoci series 1,1, 2, 3, 5, 8, 13, 21, 34, 55,
+        int first = 1;
+        int second = 1;
+        int sumfornext;
+        int n = 0;
+        System.out.println(first);
+        System.out.println(second);
+        for (int i = 0; n <= 100; i++){
+            sumfornext = first + second;
+            System.out.println(sumfornext);
+            first = second;
+            second = sumfornext;
+            n = sumfornext;
+        }
+
+=-------------------------------------------
+
+        // is number are true armstrong 153 = 1 cube + 5 cube + 3 cube = 153
+        int num = 407;
+        int armstrong = 0;
+        int lastdigit, cal;
+        int temp = num;
+        while (num > 0) {
+            lastdigit = num % 10;
+            cal = (int) Math.pow(lastdigit, 3);
+            armstrong = armstrong + cal;
+            num = num / 10;
+        }
+        if (armstrong == temp) {
+           System.out.println("armstrong");
+        } else {
+            System.out.println("not armstrong");
+        }
+
+
+-------------------------------------------------
+       // Print only Prime numbers
+        Boolean flag;
+        for (int i = 2; i < 20; i++) {
+            flag = true;
+            for (int j = 2; j<i; j++){
+                if (i % j == 0) {
+                    flag = false;
+                }
+            }
+            if (flag){
+                System.out.println(i);
+            }
+
+-------------------------------------------------------
+
+       // Print given number is prime or not
+        Scanner s = new Scanner(System.in);
+        System.out.println("please provide a number to check prime");
+        int num = s.nextInt();
+        Boolean flag = true;
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            System.out.println("prime number only");
+        } else {
+            System.out.println("not prime number");
+        }
+
+
+--------------------------------------------------------
+
+        // given array char to reverse
+        char [] arr = {'a', 'b', 'c', 'd', 'e'};
+        for (int i = arr.length-1; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
+
+
+-----------------------------------------------------------
+
+        //get the count of Capitalized words in a String
+        String name = "This String Have Capital LetterSS"; // Remove duplicates
+        int num = 0;
+        for (char val : name.toCharArray()) {
+            if (Character.isUpperCase(val)) {
+                num++;
+            }
+        }
+        System.out.println(num);
+
+------------------------------------------------------------
+
+  // Program to get output aabbbcccc withh  input a2b3c4
+        String name = "a2b3c7";
+        String Output = "";
+        String lastVal = "";
+        for(char val : name.toCharArray()) {
+            if (Character.isAlphabetic(val)) {
+                Output = Character.toString(val);
+            } else {
+                for (int i = 0; i < Integer.parseInt(Character.toString(val)); i++) {
+                    lastVal = lastVal + Output;
+                }
+            }
+        }
+        System.out.println(lastVal);
+
+----------------------------------------------------------------
+
+        int [] arr = {4, 3, 2, 1};
+        int [] arrtwo = new int[arr.length];
+        int val = 1;
+        for(int i = 0; i < arr.length; i++) {
+           for (int j = 0; j < arr.length; j++) {
+               if (i != j) {
+                   val = val * arr[j];
+               }
+           }
+            arrtwo[i] = val;
+            val = 1;
+        }
+        System.out.println(Arrays.toString(arrtwo));
+
+------------------------------------------------------------
+
+    public static int sum(int k) {
+        if(k > 0) {
+            return k + sum(k -1);
+        } else {
+            return 0;
+        }
+    }
+    public static int sum(int start, int end) {
+        if(end > start) {
+            return end + sum(start, end - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Sample program to get sum of numbers as input with recuring and halting conditions
+        int value = sum(10);
+        int valuetwo = sum(5, 10);
+        System.out.println(value);
+        System.out.println(valuetwo);
+
+    }
+
+
+----------------------------------------------
+
+
+
+
